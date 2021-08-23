@@ -8,11 +8,12 @@ body{
     scroll-behavior: smooth;
     font-family: 'Bebas' !important;
     margin: 0;
-    background-color: #1f1f1f !important;
-    background-image: url(../img/bg.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url(../img/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -90,12 +91,8 @@ ul li a:hover{
 .content-home h1{
     font-size: 90px !important;
     letter-spacing: 5px;
-
-    text-shadow: 0.05em 0 0 var(--primary-pink),
-            -0.025em -0.05em 0 var(--primary-blue),
-            0.025em 0.05em 0 var(--middle-color);
     animation: text-slide  2s ease-in-out;
-    animation: glitch 500ms infinite;
+
 }
 
 .main-title{
@@ -103,31 +100,70 @@ ul li a:hover{
         -0.05em 0 0 var(--primary-pink);
 }
 
+/* -----= C O M P E T E N C E S =----- */
+
 .content-section{
-    background-color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.75);
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .content-section ul{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
 
-
-.content-section ul i{
-    font-size: 48px;
-    padding-right: 10px;
-    letter-spacing: 5px;
+.content-section ul li{
+    font-size: 64px;
+    color: #fff;
 }
 
-.content-section ul li{
-    font-size: 32px;
-    color: #fff;
+li span i{
+    font-size: 48px;
+}
+
+.bxs-circle{
+    text-shadow: 0.05em 0 0 var(--primary-blue),
+        -0.05em 0 0 var(--primary-pink);
+    animation: glitch 150ms infinite;
+}
+
+
+
+/* -----= P R O J E C T =----- */
+
+.cover{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s all;
+}
+
+.cover:hover{
+    background-color: var(--primary-blue);
+    opacity: 1;
+}
+
+/* -----= C O N T A C T =----- */
+
+.section-form{
+    height: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: ;
+    height: 100%;
 }
 
 /* -----= J S =----- */
