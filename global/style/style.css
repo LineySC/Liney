@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6{
 section{
     padding-top: 5.5rem !important;
     padding-bottom: 4.5rem !important;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .navbar-toggler-icon{
@@ -32,7 +32,13 @@ section{
 }
 /* -----= L O A D E R =----- */
 
-/* -----= H E A D E R =-----*/
+/* -----= H E A D E R =-----*/ 
+
+@media all and (max-width: 450px) {
+    .navbar-brand {
+        font-size: 24px !important;
+    }
+}
 
 header{
     padding-top: 0.5rem;
@@ -73,6 +79,12 @@ ul li a:hover{
     border-bottom: solid 3px #fff;
 }
 
+@media all and (max-width: 450px) {
+    .navbar-brand {
+        font-size: 21px !important;
+    }
+}
+
 /* -----= M A I N =-----*/
 
 .home img{
@@ -98,6 +110,17 @@ ul li a:hover{
 .main-title{
     text-shadow: 0.05em 0 0 var(--primary-blue),
         -0.05em 0 0 var(--primary-pink);
+}
+
+@media all and (max-width:450px) {
+
+    .content-home{
+        margin-top: 55%;
+    }
+
+    .content-home h1{
+        font-size: 45px !important;
+    }
 }
 
 /* -----= C O M P E T E N C E S =----- */
@@ -133,6 +156,28 @@ li span i{
     animation: glitch 150ms infinite;
 }
 
+@media all and (max-width: 450px) {
+    .content-section{
+        flex-direction: column;
+    }
+
+    .content-section ul li {
+        font-size: 40px !important;
+    }
+
+    li span i{
+        font-size: 35px;
+    }
+}
+
+@media all and (min-width:450px) and (max-width: 1366px) {
+    .content-section ul li{
+        font-size: 48px !important;
+    }
+    li span i{
+        font-size: 32px !important;
+    }
+}
 
 
 /* -----= P R O J E C T =----- */
